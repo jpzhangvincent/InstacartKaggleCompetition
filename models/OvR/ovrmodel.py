@@ -6,14 +6,19 @@ from sklearn import datasets
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.svm import LinearSVC
 
-xtrain = pd.read_pickle(open('Desktop/X_train.pickle', 'rb'))
-ytrain = pd.read_pickle(open('Desktop/y_train.pickle', 'rb'))
+xtrain = pd.read_pickle(open('X_train.pickle', 'rb'))
+ytrain = pd.read_pickle(open('y_train.pickle', 'rb'))
 
 xtrain = xtrain.iloc[:,-100:]
 xtrain = xtrain.values
 
-model = OneVsRestClassifier(LinearSVC(random_state=1), n_jobs=2)
-model.fit(xtrain, ytrain)
+#model.fit(xtrain, ytrain)
 
-filename = 'OvRmodel.sav'
-pickle.dump(model, open(filename, 'wb'))
+def main():
+	model = OneVsRestClassifier(LinearSVC(random_state=1), n_jobs=-1)
+
+	filename = 'OvRmodel.sav'
+	pickle.dump(model, open(filename, 'wb'))
+
+if __name__ == "__main__":
+	main()
