@@ -3,6 +3,8 @@ Instacart Market Basket Analysis
 
 In this competition, Instacart is challenging the Kaggle community to use this anonymized data on customer orders over time to predict which previously purchased products will be in a user’s next order. 
 
+The project [report](https://github.com/jpzhangvincent/InstacartKaggleCompetition/blob/master/reports/STA141C_project_report.pdf) can be found in the reports folder.
+
 Project Organization
 ------------
 
